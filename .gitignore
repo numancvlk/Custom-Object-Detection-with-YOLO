@@ -2,3 +2,4 @@ Dataset/
 venv/
 *.pt
 __pycache__/
+Results/
