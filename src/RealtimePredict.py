@@ -31,7 +31,7 @@ tk.Checkbutton(root,text="Mouse",variable=mouseVar).pack(anchor="w")
 tk.Checkbutton(root, text="Custom Cup", variable=customCupVar).pack(anchor="w")
 tk.Checkbutton(root, text="Toy Car", variable=toyCarVar).pack(anchor="w")
 
-best_model_path = "Results\\MyCustomYoloModels2\\weights\\best.pt"  #EN İYİ AĞRILIKLARIN PATHI
+best_model_path = "Results\\MyCustomYoloModel2\\weights\\best.pt"  #EN İYİ AĞRILIKLARIN PATHI
 model = YOLO(best_model_path) 
 
 def updateFrame():
@@ -42,11 +42,11 @@ def updateFrame():
         video.release()
         cv.destroyAllWindows()
         return
-    
-    results = model(frame,
+    frameResized = cv.resize(frame,(640,640))
+    results = model(frameResized,
                     imgsz=640,
                     conf= 0.7,
-                    iou=0.4) #%45'üzeri oranda örüşen tahminleri siliyor.
+                    iou=0.4) #%40'üzeri oranda örtüşen tahminleri siliyor.
 
     for result in results:
         mask = [result.names[int(cls)] in getWantedClasses() for cls in result.boxes.cls]
