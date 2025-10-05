@@ -1,7 +1,7 @@
 # Custom-Object-Detection-with-YOLO
 # [TR]
 ## Projenin Amacı
-Bu projede, YOLOv8 modelinin önceden eğitilmiş sürümünü kullanarak, modelin orijinalinde yer almayan özel sınıfları (Mouse, Custom Cup, Adapter, Toy Car) tanıyabilmesini sağlamak amacıyla geliştirdim. Proje sürecinde kullanılan tüm verileri derleyerek bu dört nesne için kapsamlı bir veri seti oluşturdum ve bu setin etiketleme işlemlerini eksiksiz tamamladım.
+Bu projeyi, YOLOv8 modelinin önceden eğitilmiş sürümünü kullanarak, modelin orijinalinde yer almayan özel sınıfları (Mouse, Custom Cup, Adapter, Toy Car) transfer learning kullanarak hem gerçek zamanlı hem de fotoğraflar üzerinden tanıyabilmesini sağlamak amacıyla geliştirdim. Proje sürecinde kullanılan tüm verileri derleyerek bu dört nesne için kapsamlı bir veri seti oluşturdum ve bu setin etiketleme işlemlerini eksiksiz tamamladım.
 
 ## 📸 Veri Seti Oluşturma Süreci
 - Toplamda 2100’den fazla görüntü topladım ve bu görüntülerle 4 ayrı nesne için (Mouse, Custom Cup, Adapter, Toy Car) veri seti oluşturdum.
@@ -64,7 +64,7 @@ pip install opencv-python
 
 # [EN]
 ## Project Objective
-This project was developed with the aim of enabling the pre-trained version of the YOLOv8 model to recognize custom classes (Mouse, Custom Cup, Adapter, Toy Car) that were not included in the model's original training. Throughout the project, I compiled all the data used to create a comprehensive dataset for these four objects and fully completed the labeling process for this set.
+I developed this project using the pre-trained version of the YOLOv8 model to enable it to recognize custom classes (Mouse, Custom Cup, Adapter, Toy Car) which were not included in the original model through transfer learning, both in real-time and from images. During the project, I compiled all the data used to create a comprehensive dataset for these four objects and completed the labeling process thoroughly.
 
 ## 📸 Dataset Creation Process
 - I collected over 2,100 images in total and used them to create a dataset for four distinct objects (Mouse, Custom Cup, Adapter, Toy Car).
